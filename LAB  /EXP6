@@ -1,0 +1,7 @@
+prices = [100, 200, 300]
+qty = [2, 1, 1]
+discount, tax = 10, 5
+total = sum(p*q for p, q in zip(prices, qty))
+total = total - total*discount/100
+total = total + total*tax/100
+print("Total Cost:", total)
