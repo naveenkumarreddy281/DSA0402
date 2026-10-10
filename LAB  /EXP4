@@ -1,0 +1,4 @@
+import numpy as np
+sales_data = np.array([100, 120, 150, 200])
+print("Total Sales:", np.sum(sales_data))
+print("Increase %:", (sales_data[3]-sales_data[0])/sales_data[0]*100)
