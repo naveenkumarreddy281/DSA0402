@@ -1,0 +1,16 @@
+from collections import Counter
+import re
+
+reviews = [
+    "This phone has a good camera and good battery",
+    "The camera is clear and the battery lasts long",
+    "Good phone, excellent camera"
+]
+
+words = re.findall(r"\b[a-z]+\b", " ".join(reviews).lower())
+freq = Counter(words)
+
+print("Q16 - WORD FREQUENCY")
+print("--------------------")
+for word, count in freq.most_common():
+    print(f"{word}: {count}")
