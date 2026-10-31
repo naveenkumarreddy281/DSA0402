@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.DataFrame({
+    'Likes': [10, 20, 10, 30, 20, 10]
+})
+freq = df['Likes'].value_counts()
+print(freq.sort_index())
