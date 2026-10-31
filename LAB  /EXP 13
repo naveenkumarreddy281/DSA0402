@@ -1,0 +1,4 @@
+from collections import Counter
+text = "Data science is useful. Data science is interesting."
+words = text.lower().replace(".", "").split()
+print(Counter(words))
