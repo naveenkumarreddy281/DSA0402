@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+m = [1, 2, 3, 4, 5]
+s = [100, 150, 120, 180, 200]
+plt.plot(m, s)
+plt.show()
+plt.scatter(m, s)
+plt.show()
+plt.bar(m, s)
+plt.show()
