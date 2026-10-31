@@ -1,0 +1,19 @@
+from scipy import stats
+
+# Illustrative binary conversion data; 1 = converted, 0 = not converted
+design_a = [1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0]
+design_b = [1,1,0,1,0,1,1,0,1,0,1,1,0,1,0,1,1,0,1,0]
+
+rate_a = sum(design_a) / len(design_a)
+rate_b = sum(design_b) / len(design_b)
+t, p = stats.ttest_ind(design_a, design_b, equal_var=False)
+
+print("Q20 - A/B TEST")
+print(f"Design A conversion rate: {rate_a:.2%}")
+print(f"Design B conversion rate: {rate_b:.2%}")
+print(f"t-statistic: {t:.3f}")
+print(f"p-value: {p:.4f}")
+if p < 0.05:
+    print("Result: Significant difference (p < 0.05)")
+else:
+    print("Result: No statistically significant difference (p >= 0.05)")
